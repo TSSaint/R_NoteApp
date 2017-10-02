@@ -1,16 +1,39 @@
 // import modules
 import React from 'react';
 
+// import module uuid
+import uuid from 'uuid';
+
 // JSON data
 const notes = 
 [
     {
-        id: '4e81fc6e-bfb6-419b-93e5-0242fb6f3f6a',
+        id: uuid.v4(),
         task: 'Learn React'
       },
       {
-        id: '11bbffc8-5891-4b45-b9ea-5c99aadf870f',
+        id: uuid.v4(),
+        task: 'Learn Vue'
+      },
+      {
+        id: uuid.v4(),
+        task: 'Re-Learn Ruby'
+      },
+      {
+        id: uuid.v4(),
+        task: 'Re-Learn Ruby on Rails'
+      },
+      {
+        id: uuid.v4(),
+        task: 'Make some JavaScript based apps'
+      },
+      {
+        id: uuid.v4(),
         task: 'Do laundry'
+      },
+      {
+        id: uuid.v4(),
+        task: 'Go to sleep'
       }
 ]
 
