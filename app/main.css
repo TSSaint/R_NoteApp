@@ -1,6 +1,9 @@
+/* import Google Font */
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
 body {
   background-color: cornsilk;
-
-  font-family: sans-serif;
+  font-family: 'Crimson Text', 'Times New Roman', serif;
+  font-size: 4em;
 }
 
