@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // import components
-import Notes from './components/Notes';
+import App from './components/App';
 
 // set port
 if(process.env.NODE_ENV !== 'production') {
@@ -14,6 +14,6 @@ ReactDOM.render(
 
   // React Component Syntax
   // <(COMPONENT NAME) />
-  <Notes />,
+  <App />,
   document.getElementById('app')
 );
