@@ -12,10 +12,10 @@ const notes =
         id: '11bbffc8-5891-4b45-b9ea-5c99aadf870f',
         task: 'Do laundry'
       }
-    ];
-    
-    export default () => (
+]
+
+export default () => (
       <ul>{notes.map(note =>
         <li key={note.id}>{note.task}</li>
     )}</ul>
-]
+)
