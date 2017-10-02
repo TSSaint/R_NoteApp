@@ -1,11 +1,10 @@
 import React from 'react';
-
 import uuid from 'uuid';
-
 import Notes from './Notes';
 
 export default class App extends React.Component {
     constructor(props) {
+        //
       super(props);
   
       this.state = {
@@ -17,27 +16,45 @@ export default class App extends React.Component {
           {
             id: uuid.v4(),
             task: 'Do laundry'
+          },
+          {
+            id: uuid.v4(),
+            task: 'Got to sleep'
           }
         ]
       };
     }
+        //
     render() {
       const {notes} = this.state;
-
-    return (
-      <div>
-          <button onClick={this.addNote}>+</button>
-          <Notes notes={notes} />
+  
+      return (
+        <div>
+            <button onClick={this.addNote}>+</button>
+            <Notes notes={notes} onDelete={this.deleteNote} />
         </div>
     );
-    }
-    addNote = () => {
-    
+  }
+
+  addNote = () => {
+      //
     this.setState({
-    notes: this.state.notes.concat([{
+      notes: this.state.notes.concat([{
         id: uuid.v4(),
         task: 'New task'
       }])
     });
+    //
+  }
+
+  deleteNote = (id, e) => {
+    // Avoid bubbling to edit
+    e.stopPropagation();
+
+    this.setState({
+      notes: this.state.notes.filter(note => note.id !== id)
+    });
   }
 }
+
+  
