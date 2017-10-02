@@ -2,6 +2,9 @@ import React from 'react';
 
 // import uuid from 'uuid';
 
+import Note from './Note';
+
+
 // const notes = [
 //   {
 //     id: uuid.v4(),
@@ -14,8 +17,9 @@ import React from 'react';
 // ];
 
 export default ({notes}) => (
+    <ul>{notes.map(note =>
 
-  <ul>{notes.map(note =>
-    <li key={note.id}>{note.task}</li>
+    <li key={note.id}><Note task={note.task} /></li>
+
   )}</ul>
-);
+)
