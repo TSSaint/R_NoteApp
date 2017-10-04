@@ -25,9 +25,8 @@ export default class App extends React.Component {
       };
     }
         //
-    render() {
-      const {notes} = this.state;
-  
+  render() {
+    const {notes} = this.state;
       return (
         <div>
             <button onClick={this.addNote}>+</button>
