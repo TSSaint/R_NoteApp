@@ -1,6 +1,8 @@
 import React from 'react';
 import uuid from 'uuid';
 import Notes from './Notes';
+import Note from './Note';
+import Editable from './Editable';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -25,9 +27,8 @@ export default class App extends React.Component {
       };
     }
         //
-    render() {
-      const {notes} = this.state;
-  
+  render() {
+    const {notes} = this.state;
       return (
         <div>
             <button onClick={this.addNote}>+</button>
