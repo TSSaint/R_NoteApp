@@ -25,6 +25,7 @@ class Edit extends React.Component {
   }
   finishEdit = (e) => {
     const value = e.target.value;
+    console.log(value);
 
     if(this.props.onEdit) {
       this.props.onEdit(value);
