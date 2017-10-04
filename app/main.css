@@ -7,3 +7,20 @@ body {
   font-size: 1.5em;
 }
 
+/* Component $tyles */
+/* button */
+
+.add-note {
+  color: white;
+  background-color: #2F00FF;
+  border: 0px solid white;
+}
+
+/* notes */
+.notes {
+  margin: 0.5em;
+  padding-left: 0;
+
+  max-width: 10em;
+  list-style: none;
+}
